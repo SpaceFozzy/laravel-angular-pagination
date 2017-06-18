@@ -19,6 +19,13 @@ export class NativeBookingService {
         .catch(this.handleError);
     }
 
+    getBookingsAtUrl(url: string): Promise<PaginatedBooking>{
+        return this.http.get(url)
+        .toPromise()
+        .then(response => response.json() as PaginatedBooking)
+        .catch(this.handleError);
+    }
+
     private handleError(error: any): Promise<any> {
         console.error('An error occurred', error); // for demo purposes only
         return Promise.reject(error.message || error);

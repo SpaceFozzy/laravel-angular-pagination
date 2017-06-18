@@ -17,4 +17,13 @@ export class LaravelNativeComponent implements OnInit {
     this.service.getBookings().then(bookings=>this.bookings = bookings);
   }
 
+  prevPage() {
+    this.service.getBookingsAtUrl(this.bookings.prev_page_url).then(bookings=>this.bookings = bookings);
+  }
+
+  nextPage() {
+    this.service.getBookingsAtUrl(this.bookings.next_page_url).then(bookings=>this.bookings = bookings);
+  }
+
+
 }
