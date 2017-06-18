@@ -24,7 +24,7 @@ class BookingController extends Controller
      */
     public function index()
     {
-        $users = Booking::orderBy('id','desc')->paginate(10);
+        $users = Booking::orderBy('id','asc')->paginate(10);
         return $users;
     }
 }

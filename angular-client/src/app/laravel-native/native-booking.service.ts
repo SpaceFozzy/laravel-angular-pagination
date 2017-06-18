@@ -5,14 +5,17 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/toPromise';
 
+import { Booking } from '../shared/booking.model'
+
 @Injectable()
 export class NativeBookingService {
     private bookinUrl: string = '/api/bookings'
     constructor(private http: Http) { }
-    getBookings(){
+    
+    getBookings(): Promise<Booking[]>{
         return this.http.get(this.bookinUrl)
         .toPromise()
-        .then(response => response.json())
+        .then(response => response.json()['data'] as Booking[])
         .catch(this.handleError);
     }
 
