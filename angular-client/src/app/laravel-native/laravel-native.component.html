@@ -1,3 +1,6 @@
 <ul>
-  <li *ngFor="let booking of bookings">{{booking.description}}</li>
+  <li *ngFor="let booking of bookings.data">{{booking.description}}</li>
 </ul>
+<p>Showing booking {{bookings.from}} to {{bookings.to}} of {{bookings.total}}</p>
+<p>Page {{bookings.current_page}} of {{bookings.last_page}}</p>
+<button [disabled]="!bookings.prev_page_url" >Prev</button> <button [disabled]="!bookings.next_page_url">Next</button> 
