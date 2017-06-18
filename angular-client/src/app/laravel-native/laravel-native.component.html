@@ -1,4 +1,4 @@
-<div *ngIf="bookings">
+<div *ngIf="bookings && !service.isLoading">
   <ul>
     <li *ngFor="let booking of bookings.data">{{booking.description}}</li>
   </ul>
@@ -7,3 +7,4 @@
   <button (click)="prevPage()" [disabled]="!bookings.prev_page_url" >Prev</button>
   <button (click)="nextPage()" [disabled]="!bookings.next_page_url">Next</button> 
 </div>
+<p *ngIf="service.isLoading">Loading...</p>

@@ -10,7 +10,7 @@ import { PaginatedBooking } from '../shared/paginated-booking.model'
 })
 export class LaravelNativeComponent implements OnInit {
   bookings:PaginatedBooking;
-  constructor(private service: NativeBookingService) { }
+  constructor(public service: NativeBookingService) { }
 
   ngOnInit() {
     this.service.getBookings().then(bookings=>this.bookings = bookings);
