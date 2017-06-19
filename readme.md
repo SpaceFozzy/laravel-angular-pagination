@@ -1,6 +1,11 @@
 # A Laravel and Angular Pagination Example
+This project is meant to demonstrate how pagination can be implemented with Laravel and Angular. Currently it demonstrates Laravel's native pagination but may be expanded to demonstrate datatable libraries in the future.
+## Notes
+ * The project demo is currently up and running at http://laravel-angular-pagination.robotmonster.ca/angular/laravel-native.
+ * The Angular portion of the project can be found in the `angular-client/` folder.
+ * The Angular component demonstrating native Laravel pagination with Angular UI is `angular-client/src/app/laravel-native` [(link) ](https://github.com/SpaceFozzy/laravel-angular-pagination/tree/master/angular-client/src/app/laravel-native).
 
-## Installation
+## Local Project Setup
 To get the project installed and running locally:
 1. Clone the repository.
 2. Install the laravel project with composer `composer install`.
