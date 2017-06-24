@@ -7,29 +7,29 @@ import { AppComponent } from './app.component';
 
 import { RouterModule, Routes } from '@angular/router';
 
-import { LaravelNativeComponent } from './laravel-native/laravel-native.component';
-import { NativeBookingService } from "app/laravel-native/native-booking.service";
+import { BasicPaginationComponent } from './basic-pagination/basic-pagination.component';
+import { BasicPaginationService } from "app/basic-pagination/basic-pagination.service";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LaravelNativeComponent
+    BasicPaginationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-      { path: 'laravel-native', component: LaravelNativeComponent },
+      { path: 'basic-pagination', component: BasicPaginationComponent },
       { path: '',
-        redirectTo: '/laravel-native',
+        redirectTo: '/basic-pagination',
         pathMatch: 'full'
       }
     ])
     // other imports here
   ],
-  providers: [NativeBookingService],
+  providers: [BasicPaginationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

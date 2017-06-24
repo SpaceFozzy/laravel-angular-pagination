@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { NativeBookingService } from './native-booking.service' 
+import { BasicPaginationService } from './basic-pagination.service' 
 
 import { PaginatedBooking } from '../shared/paginated-booking.model'
 
 @Component({
-  selector: 'laravel-native',
-  templateUrl: './laravel-native.component.html',
-  styleUrls: ['./laravel-native.component.css']
+  selector: 'basic',
+  templateUrl: './basic-pagination.component.html',
+  styleUrls: ['./basic-pagination.component.css']
 })
-export class LaravelNativeComponent implements OnInit {
+export class BasicPaginationComponent implements OnInit {
   bookings:PaginatedBooking;
-  constructor(public service: NativeBookingService) { }
+  constructor(public service: BasicPaginationService) { }
 
   ngOnInit() {
     this.service.getBookings().then(bookings=>this.bookings = bookings);

@@ -8,7 +8,7 @@ import 'rxjs/add/operator/toPromise';
 import { PaginatedBooking } from '../shared/paginated-booking.model'
 
 @Injectable()
-export class NativeBookingService {
+export class BasicPaginationService {
     private bookinUrl: string = '/api/bookings'
     public isLoading: boolean = false;
     constructor(private http: Http) { }
