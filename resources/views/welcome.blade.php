@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Laravel and Angular Pagination</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="/angular/laravel-native">Basic Setup</a>
+                    <a href="/laravel-angular/basic-pagination">Basic Setup</a>
                 </div>                
             </div>
         </div>
