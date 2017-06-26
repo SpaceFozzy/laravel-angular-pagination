@@ -24,7 +24,17 @@ class BookingController extends Controller
      */
     public function index()
     {
-        $users = Booking::orderBy('id','asc')->paginate(10);
-        return $users;
+        $bookings = Booking::orderBy('id','asc')->paginate(10);
+        return $bookings;
+    }
+
+    public function search(Request $request)
+    {
+        $text = $request->input('text');
+        $this->validate($request, array(
+            'text' => 'max:255',
+        ));
+        $bookings = Booking::where('description', 'like', '%'.$request->text.'%')->get();
+        return $bookings;
     }
 }

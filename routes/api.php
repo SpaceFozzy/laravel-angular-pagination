@@ -17,4 +17,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('bookings/search/', array('as' => 'bookings.search', 'uses' => 'BookingController@search'));
 Route::get('bookings', array('as'=>'bookings.index', 'uses'=>'BookingController@index'));

@@ -83,7 +83,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="/laravel-angular/basic-pagination">Basic Setup</a>
+                    <a href="/laravel-angular/basic-pagination">Basic</a>
+                    <a href="/laravel-angular/search-pagination">Searchable</a>
                 </div>                
             </div>
         </div>
