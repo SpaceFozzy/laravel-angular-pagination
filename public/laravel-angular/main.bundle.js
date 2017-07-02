@@ -1,1 +1,515 @@
-webpackJsonp([1,4],{"/fcW":function(n,l){function t(n){throw new Error("Cannot find module '"+n+"'.")}t.keys=function(){return[]},t.resolve=t,n.exports=t,t.id="/fcW"},0:function(n,l,t){n.exports=t("x35b")},"1A80":function(n,l,t){"use strict";function u(n){return r._25(0,[(n()(),r._26(16777216,null,null,1,"router-outlet",[],null,null,null,null,null)),r._27(212992,null,0,e.y,[e.q,r.W,r.e,[8,null],r.T],null,null)],function(n,l){n(l,1,0)},null)}function o(n){return r._25(0,[(n()(),r._26(0,null,null,1,"app-root",[],null,null,null,u,s)),r._27(49152,null,0,a.a,[],null,null)],null,null)}var i=t("Mrzb"),r=t("3j3K"),e=t("5oXY"),a=t("YWx4");t.d(l,"a",function(){return f});var c=[i.a],s=r._24({encapsulation:2,styles:c,data:{}}),f=r._28("app-root",a.a,o,{},{},[])},"1kSB":function(n,l,t){"use strict";t.d(l,"a",function(){return u});var u=[""]},"80wZ":function(n,l,t){"use strict";function u(n){return c._25(0,[(n()(),c._26(0,null,null,1,"li",[],null,null,null,null,null)),(n()(),c._29(null,["",""]))],null,function(n,l){n(l,1,0,l.context.$implicit.description)})}function o(n){return c._25(0,[(n()(),c._26(0,null,null,21,"div",[],null,null,null,null,null)),(n()(),c._29(null,["\n  "])),(n()(),c._26(0,null,null,0,"input",[["placeholder","Search bookings..."]],null,null,null,null,null)),(n()(),c._29(null,["\n  "])),(n()(),c._26(0,null,null,4,"ul",[],null,null,null,null,null)),(n()(),c._29(null,["\n    "])),(n()(),c._30(16777216,null,null,1,null,u)),c._27(802816,null,0,s.l,[c.W,c._7,c.l],{ngForOf:[0,"ngForOf"]},null),(n()(),c._29(null,["\n  "])),(n()(),c._29(null,["\n  "])),(n()(),c._26(0,null,null,1,"p",[],null,null,null,null,null)),(n()(),c._29(null,["Showing booking "," to "," of ",""])),(n()(),c._29(null,["\n  "])),(n()(),c._26(0,null,null,1,"p",[],null,null,null,null,null)),(n()(),c._29(null,["Page "," of ",""])),(n()(),c._29(null,["\n  "])),(n()(),c._26(0,null,null,1,"button",[],[[8,"disabled",0]],[[null,"click"]],function(n,l,t){var u=!0,o=n.component;if("click"===l){u=!1!==o.prevPage()&&u}return u},null,null)),(n()(),c._29(null,["Prev"])),(n()(),c._29(null,["\n  "])),(n()(),c._26(0,null,null,1,"button",[],[[8,"disabled",0]],[[null,"click"]],function(n,l,t){var u=!0,o=n.component;if("click"===l){u=!1!==o.nextPage()&&u}return u},null,null)),(n()(),c._29(null,["Next"])),(n()(),c._29(null,[" \n"]))],function(n,l){n(l,7,0,l.component.bookings.data)},function(n,l){var t=l.component;n(l,11,0,t.bookings.from,t.bookings.to,t.bookings.total),n(l,14,0,t.bookings.current_page,t.bookings.last_page),n(l,16,0,!t.bookings.prev_page_url),n(l,19,0,!t.bookings.next_page_url)})}function i(n){return c._25(0,[(n()(),c._26(0,null,null,1,"p",[],null,null,null,null,null)),(n()(),c._29(null,["Loading..."]))],null,null)}function r(n){return c._25(0,[(n()(),c._26(0,null,null,1,"h1",[],null,null,null,null,null)),(n()(),c._29(null,["Searchable Pagination"])),(n()(),c._29(null,["\n"])),(n()(),c._30(16777216,null,null,1,null,o)),c._27(16384,null,0,s.m,[c.W,c._7],{ngIf:[0,"ngIf"]},null),(n()(),c._29(null,["\n"])),(n()(),c._30(16777216,null,null,1,null,i)),c._27(16384,null,0,s.m,[c.W,c._7],{ngIf:[0,"ngIf"]},null)],function(n,l){var t=l.component;n(l,4,0,t.bookings&&!t.service.isLoading),n(l,7,0,t.service.isLoading)},null)}function e(n){return c._25(0,[(n()(),c._26(0,null,null,1,"app-search-pagination",[],null,null,null,r,p)),c._27(114688,null,0,f.a,[d.a],null,null)],function(n,l){n(l,1,0)},null)}var a=t("1kSB"),c=t("3j3K"),s=t("2Je8"),f=t("gXYt"),d=t("PqdU");t.d(l,"a",function(){return _});var g=[a.a],p=c._24({encapsulation:0,styles:g,data:{}}),_=c._28("app-search-pagination",f.a,e,{},{},[])},"9T3V":function(n,l,t){"use strict";t.d(l,"a",function(){return u});var u=[""]},"B/M0":function(n,l,t){"use strict";var u=t("LFtX");t.d(l,"a",function(){return o});var o=function(){function n(n){this.service=n}return n.prototype.ngOnInit=function(){var n=this;this.service.getBookings().then(function(l){return n.bookings=l})},n.prototype.prevPage=function(){var n=this;this.service.getBookingsAtUrl(this.bookings.prev_page_url).then(function(l){return n.bookings=l})},n.prototype.nextPage=function(){var n=this;this.service.getBookingsAtUrl(this.bookings.next_page_url).then(function(l){return n.bookings=l})},n.ctorParameters=function(){return[{type:u.a}]},n}()},Iksp:function(n,l,t){"use strict";t.d(l,"a",function(){return u});var u=function(){function n(){}return n}()},LFtX:function(n,l,t){"use strict";var u=t("Fzro"),o=t("+pb+"),i=(t.n(o),t("6Yye")),r=(t.n(i),t("eErF"));t.n(r);t.d(l,"a",function(){return e});var e=function(){function n(n){this.http=n,this.bookinUrl="/api/bookings",this.isLoading=!1}return n.prototype.getBookings=function(){var n=this;return this.isLoading=!0,this.http.get(this.bookinUrl).toPromise().then(function(l){return n.isLoading=!1,l.json()}).catch(this.handleError)},n.prototype.getBookingsAtUrl=function(n){var l=this;return this.isLoading=!0,this.http.get(n).toPromise().then(function(n){return l.isLoading=!1,n.json()}).catch(this.handleError)},n.prototype.handleError=function(n){return console.error("An error occurred",n),this.isLoading=!1,Promise.reject(n.message||n)},n.ctorParameters=function(){return[{type:u.i}]},n}()},Mrzb:function(n,l,t){"use strict";t.d(l,"a",function(){return u});var u=["body,html{background-color:#fff;color:#636b6f;font-family:Raleway,sans-serif;font-weight:100;margin:20px;text-align:center}.full-height,body,html{height:100vh}.flex-center{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.position-ref{position:relative}.top-right{position:absolute;right:10px;top:18px}.content{text-align:center}.title{font-size:84px}.links>a{color:#636b6f;padding:0 25px;font-size:12px;font-weight:600;letter-spacing:.1rem;text-decoration:none;text-transform:uppercase}.m-b-md{margin-bottom:30px}h1{font-weight:100}ul{list-style:none;padding:0}"]},PqdU:function(n,l,t){"use strict";var u=t("Fzro"),o=t("+pb+"),i=(t.n(o),t("6Yye")),r=(t.n(i),t("eErF"));t.n(r);t.d(l,"a",function(){return e});var e=function(){function n(n){this.http=n,this.bookinUrl="/api/bookings",this.isLoading=!1}return n.prototype.getBookings=function(){var n=this;return this.isLoading=!0,this.http.get(this.bookinUrl).toPromise().then(function(l){return n.isLoading=!1,l.json()}).catch(this.handleError)},n.prototype.getBookingsAtUrl=function(n){var l=this;return this.isLoading=!0,this.http.get(n).toPromise().then(function(n){return l.isLoading=!1,n.json()}).catch(this.handleError)},n.prototype.handleError=function(n){return console.error("An error occurred",n),this.isLoading=!1,Promise.reject(n.message||n)},n.ctorParameters=function(){return[{type:u.i}]},n}()},YWx4:function(n,l,t){"use strict";t.d(l,"a",function(){return u});var u=function(){function n(){this.title="Basic Pagination Setup"}return n}()},gXYt:function(n,l,t){"use strict";var u=t("PqdU");t.d(l,"a",function(){return o});var o=function(){function n(n){this.service=n}return n.prototype.ngOnInit=function(){var n=this;this.service.getBookings().then(function(l){return n.bookings=l})},n.prototype.prevPage=function(){var n=this;this.service.getBookingsAtUrl(this.bookings.prev_page_url).then(function(l){return n.bookings=l})},n.prototype.nextPage=function(){var n=this;this.service.getBookingsAtUrl(this.bookings.next_page_url).then(function(l){return n.bookings=l})},n.ctorParameters=function(){return[{type:u.a}]},n}()},kZql:function(n,l,t){"use strict";t.d(l,"a",function(){return u});var u={production:!0}},kke6:function(n,l,t){"use strict";var u=t("3j3K"),o=t("Iksp"),i=t("YWx4"),r=t("sEaN"),e=t("80wZ"),a=t("1A80"),c=t("2Je8"),s=t("Qbdm"),f=t("NVOs"),d=t("Fzro"),g=t("5oXY"),p=t("LFtX"),_=t("PqdU"),h=t("B/M0"),b=t("gXYt");t.d(l,"a",function(){return k});var k=u.b(o.a,[i.a],function(n){return u.c([u.d(512,u.e,u.f,[[8,[r.a,e.a,a.a]],[3,u.e],u.g]),u.d(5120,u.h,u.i,[[3,u.h]]),u.d(4608,c.a,c.b,[u.h]),u.d(5120,u.j,u.k,[]),u.d(5120,u.l,u.m,[]),u.d(5120,u.n,u.o,[]),u.d(4608,s.b,s.c,[s.d]),u.d(6144,u.p,null,[s.b]),u.d(4608,s.e,s.f,[]),u.d(5120,s.g,function(n,l,t,u){return[new s.h(n),new s.i(l),new s.j(t,u)]},[s.d,s.d,s.d,s.e]),u.d(4608,s.k,s.k,[s.g,u.q]),u.d(135680,s.l,s.l,[s.d]),u.d(4608,s.m,s.m,[s.k,s.l]),u.d(6144,u.r,null,[s.m]),u.d(6144,s.n,null,[s.l]),u.d(4608,u.s,u.s,[u.q]),u.d(4608,s.o,s.o,[s.d]),u.d(4608,s.p,s.p,[s.d]),u.d(4608,f.a,f.a,[]),u.d(4608,d.a,d.a,[]),u.d(4608,d.b,d.c,[]),u.d(5120,d.d,d.e,[]),u.d(4608,d.f,d.f,[d.a,d.b,d.d]),u.d(4608,d.g,d.h,[]),u.d(5120,d.i,d.j,[d.f,d.g]),u.d(5120,g.a,g.b,[g.c]),u.d(4608,g.d,g.d,[]),u.d(6144,g.e,null,[g.d]),u.d(135680,g.f,g.f,[g.c,u.t,u.u,u.v,g.e]),u.d(4608,g.g,g.g,[]),u.d(5120,g.h,g.i,[g.j]),u.d(5120,u.w,function(n){return[n]},[g.h]),u.d(4608,p.a,p.a,[d.i]),u.d(4608,_.a,_.a,[d.i]),u.d(512,c.c,c.c,[]),u.d(1024,u.x,s.q,[]),u.d(1024,u.y,function(){return[g.k()]},[]),u.d(512,g.j,g.j,[u.v]),u.d(1024,u.z,function(n,l,t){return[s.r(n,l),g.l(t)]},[[2,s.s],[2,u.y],g.j]),u.d(512,u.A,u.A,[[2,u.z]]),u.d(131584,u.B,u.B,[u.q,u.C,u.v,u.x,u.e,u.A]),u.d(2048,u.D,null,[u.B]),u.d(512,u.E,u.E,[u.D]),u.d(512,s.t,s.t,[[3,s.t]]),u.d(512,f.b,f.b,[]),u.d(512,f.c,f.c,[]),u.d(512,d.k,d.k,[]),u.d(1024,g.m,g.n,[[3,g.c]]),u.d(512,g.o,g.p,[]),u.d(512,g.q,g.q,[]),u.d(256,g.r,{},[]),u.d(1024,c.d,g.s,[c.e,[2,c.f],g.r]),u.d(512,c.g,c.g,[c.d]),u.d(512,u.u,u.u,[]),u.d(512,u.t,u.F,[u.u,[2,u.G]]),u.d(1024,g.t,function(){return[[{path:"basic-pagination",component:h.a},{path:"search-pagination",component:b.a},{path:"",redirectTo:"/basic-pagination",pathMatch:"full"}]]},[]),u.d(1024,g.c,g.u,[u.D,g.o,g.q,c.g,u.v,u.t,u.u,g.t,g.r,[2,g.v],[2,g.w]]),u.d(512,g.x,g.x,[[2,g.m],[2,g.c]]),u.d(512,o.a,o.a,[])])})},sEaN:function(n,l,t){"use strict";function u(n){return c._25(0,[(n()(),c._26(0,null,null,1,"li",[],null,null,null,null,null)),(n()(),c._29(null,["",""]))],null,function(n,l){n(l,1,0,l.context.$implicit.description)})}function o(n){return c._25(0,[(n()(),c._26(0,null,null,19,"div",[],null,null,null,null,null)),(n()(),c._29(null,["\n  "])),(n()(),c._26(0,null,null,4,"ul",[],null,null,null,null,null)),(n()(),c._29(null,["\n    "])),(n()(),c._30(16777216,null,null,1,null,u)),c._27(802816,null,0,s.l,[c.W,c._7,c.l],{ngForOf:[0,"ngForOf"]},null),(n()(),c._29(null,["\n  "])),(n()(),c._29(null,["\n  "])),(n()(),c._26(0,null,null,1,"p",[],null,null,null,null,null)),(n()(),c._29(null,["Showing booking "," to "," of ",""])),(n()(),c._29(null,["\n  "])),(n()(),c._26(0,null,null,1,"p",[],null,null,null,null,null)),(n()(),c._29(null,["Page "," of ",""])),(n()(),c._29(null,["\n  "])),(n()(),c._26(0,null,null,1,"button",[],[[8,"disabled",0]],[[null,"click"]],function(n,l,t){var u=!0,o=n.component;if("click"===l){u=!1!==o.prevPage()&&u}return u},null,null)),(n()(),c._29(null,["Prev"])),(n()(),c._29(null,["\n  "])),(n()(),c._26(0,null,null,1,"button",[],[[8,"disabled",0]],[[null,"click"]],function(n,l,t){var u=!0,o=n.component;if("click"===l){u=!1!==o.nextPage()&&u}return u},null,null)),(n()(),c._29(null,["Next"])),(n()(),c._29(null,[" \n"]))],function(n,l){n(l,5,0,l.component.bookings.data)},function(n,l){var t=l.component;n(l,9,0,t.bookings.from,t.bookings.to,t.bookings.total),n(l,12,0,t.bookings.current_page,t.bookings.last_page),n(l,14,0,!t.bookings.prev_page_url),n(l,17,0,!t.bookings.next_page_url)})}function i(n){return c._25(0,[(n()(),c._26(0,null,null,1,"p",[],null,null,null,null,null)),(n()(),c._29(null,["Loading..."]))],null,null)}function r(n){return c._25(0,[(n()(),c._26(0,null,null,1,"h1",[],null,null,null,null,null)),(n()(),c._29(null,["Basic Setup"])),(n()(),c._29(null,["\n"])),(n()(),c._30(16777216,null,null,1,null,o)),c._27(16384,null,0,s.m,[c.W,c._7],{ngIf:[0,"ngIf"]},null),(n()(),c._29(null,["\n"])),(n()(),c._30(16777216,null,null,1,null,i)),c._27(16384,null,0,s.m,[c.W,c._7],{ngIf:[0,"ngIf"]},null)],function(n,l){var t=l.component;n(l,4,0,t.bookings&&!t.service.isLoading),n(l,7,0,t.service.isLoading)},null)}function e(n){return c._25(0,[(n()(),c._26(0,null,null,1,"basic",[],null,null,null,r,p)),c._27(114688,null,0,f.a,[d.a],null,null)],function(n,l){n(l,1,0)},null)}var a=t("9T3V"),c=t("3j3K"),s=t("2Je8"),f=t("B/M0"),d=t("LFtX");t.d(l,"a",function(){return _});var g=[a.a],p=c._24({encapsulation:0,styles:g,data:{}}),_=c._28("basic",f.a,e,{},{},[])},x35b:function(n,l,t){"use strict";Object.defineProperty(l,"__esModule",{value:!0});var u=t("3j3K"),o=t("kZql"),i=t("Qbdm"),r=t("kke6");o.a.production&&t.i(u.a)(),t.i(i.a)().bootstrapModuleFactory(r.a)}},[0]);
+webpackJsonp([1,4],{
+
+/***/ 102:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(3);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var AppComponent = (function () {
+    function AppComponent() {
+        this.title = 'Basic Pagination Setup';
+    }
+    return AppComponent;
+}());
+AppComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
+        selector: 'app-root',
+        template: __webpack_require__(163),
+        styles: [__webpack_require__(160)],
+        encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* ViewEncapsulation */].None
+    })
+], AppComponent);
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 103:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__basic_pagination_basic_pagination_component__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__basic_pagination_basic_pagination_service__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__search_pagination_search_pagination_component__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__search_pagination_search_pagination_service__ = __webpack_require__(66);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+var AppModule = (function () {
+    function AppModule() {
+    }
+    return AppModule;
+}());
+AppModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__basic_pagination_basic_pagination_component__["a" /* BasicPaginationComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__search_pagination_search_pagination_component__["a" /* SearchPaginationComponent */]
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* RouterModule */].forRoot([
+                { path: 'basic-pagination', component: __WEBPACK_IMPORTED_MODULE_6__basic_pagination_basic_pagination_component__["a" /* BasicPaginationComponent */] },
+                { path: 'search-pagination', component: __WEBPACK_IMPORTED_MODULE_8__search_pagination_search_pagination_component__["a" /* SearchPaginationComponent */] },
+                { path: '',
+                    redirectTo: '/basic-pagination',
+                    pathMatch: 'full'
+                }
+            ])
+            // other imports here
+        ],
+        providers: [__WEBPACK_IMPORTED_MODULE_7__basic_pagination_basic_pagination_service__["a" /* BasicPaginationService */], __WEBPACK_IMPORTED_MODULE_9__search_pagination_search_pagination_service__["a" /* SearchPaginationService */]],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
+    })
+], AppModule);
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 104:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__basic_pagination_service__ = __webpack_require__(65);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BasicPaginationComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var BasicPaginationComponent = (function () {
+    function BasicPaginationComponent(service) {
+        this.service = service;
+    }
+    BasicPaginationComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.service.getBookings().then(function (bookings) { return _this.bookings = bookings; });
+    };
+    BasicPaginationComponent.prototype.prevPage = function () {
+        var _this = this;
+        this.service.getBookingsAtUrl(this.bookings.prev_page_url).then(function (bookings) { return _this.bookings = bookings; });
+    };
+    BasicPaginationComponent.prototype.nextPage = function () {
+        var _this = this;
+        this.service.getBookingsAtUrl(this.bookings.next_page_url).then(function (bookings) { return _this.bookings = bookings; });
+    };
+    return BasicPaginationComponent;
+}());
+BasicPaginationComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
+        selector: 'basic',
+        template: __webpack_require__(164),
+        styles: [__webpack_require__(161)]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__basic_pagination_service__["a" /* BasicPaginationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__basic_pagination_service__["a" /* BasicPaginationService */]) === "function" && _a || Object])
+], BasicPaginationComponent);
+
+var _a;
+//# sourceMappingURL=basic-pagination.component.js.map
+
+/***/ }),
+
+/***/ 105:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__search_pagination_service__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_debounceTime__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_debounceTime__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_distinctUntilChanged__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_distinctUntilChanged___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_distinctUntilChanged__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPaginationComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var SearchPaginationComponent = (function () {
+    function SearchPaginationComponent(service) {
+        this.service = service;
+        this.searchTermStream = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["Subject"]();
+    }
+    SearchPaginationComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.service.getBookings().then(function (bookings) { return _this.bookings = bookings; });
+        this.searchTermStream
+            .debounceTime(300)
+            .distinctUntilChanged()
+            .subscribe(function (term) {
+            _this.service.search(term).then(function (bookings) { return _this.bookings = bookings; });
+        });
+    };
+    SearchPaginationComponent.prototype.prevPage = function () {
+        var _this = this;
+        this.service.getBookingsAtUrl(this.bookings.prev_page_url).then(function (bookings) { return _this.bookings = bookings; });
+    };
+    SearchPaginationComponent.prototype.nextPage = function () {
+        var _this = this;
+        this.service.getBookingsAtUrl(this.bookings.next_page_url).then(function (bookings) { return _this.bookings = bookings; });
+    };
+    SearchPaginationComponent.prototype.search = function (term) {
+        this.searchTermStream.next(term);
+    };
+    return SearchPaginationComponent;
+}());
+SearchPaginationComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* Component */])({
+        selector: 'search-pagination',
+        template: __webpack_require__(165),
+        styles: [__webpack_require__(162)]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__search_pagination_service__["a" /* SearchPaginationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__search_pagination_service__["a" /* SearchPaginationService */]) === "function" && _a || Object])
+], SearchPaginationComponent);
+
+var _a;
+//# sourceMappingURL=search-pagination.component.js.map
+
+/***/ }),
+
+/***/ 106:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+// The file contents for the current environment will overwrite these during build.
+// The build system defaults to the dev environment which uses `environment.ts`, but if you do
+// `ng build --env=prod` then `environment.prod.ts` will be used instead.
+// The list of which env maps to which file can be found in `.angular-cli.json`.
+// The file contents for the current environment will overwrite these during build.
+var environment = {
+    production: false
+};
+//# sourceMappingURL=environment.js.map
+
+/***/ }),
+
+/***/ 160:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(24)(false);
+// imports
+
+
+// module
+exports.push([module.i, "html, body {\n    background-color: #fff;\n    color: #636b6f;\n    font-family: 'Raleway', sans-serif;\n    font-weight: 100;\n    height: 100vh;\n    margin: 20px;\n    text-align: center;\n}\n\n.full-height {\n    height: 100vh;\n}\n\n.flex-center {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n\n.position-ref {\n    position: relative;\n}\n\n.top-right {\n    position: absolute;\n    right: 10px;\n    top: 18px;\n}\n\n.content {\n    text-align: center;\n}\n\n.title {\n    font-size: 84px;\n}\n\n.links > a {\n    color: #636b6f;\n    padding: 0 25px;\n    font-size: 12px;\n    font-weight: 600;\n    letter-spacing: .1rem;\n    text-decoration: none;\n    text-transform: uppercase;\n}\n\n.m-b-md {\n    margin-bottom: 30px;\n}\n\nh1 {\n    font-weight:100;\n}\n\nul {\n    list-style: none;\n    padding:0\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 161:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(24)(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 162:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(24)(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 163:
+/***/ (function(module, exports) {
+
+module.exports = "<router-outlet></router-outlet>"
+
+/***/ }),
+
+/***/ 164:
+/***/ (function(module, exports) {
+
+module.exports = "<h1>Basic Setup</h1>\n<div *ngIf=\"bookings && !service.isLoading\">\n  <ul>\n    <li *ngFor=\"let booking of bookings.data\">{{booking.description}}</li>\n  </ul>\n  <p>Showing booking {{bookings.from}} to {{bookings.to}} of {{bookings.total}}</p>\n  <p>Page {{bookings.current_page}} of {{bookings.last_page}}</p>\n  <button (click)=\"prevPage()\" [disabled]=\"!bookings.prev_page_url\" >Prev</button>\n  <button (click)=\"nextPage()\" [disabled]=\"!bookings.next_page_url\">Next</button> \n</div>\n<p *ngIf=\"service.isLoading\">Loading...</p>"
+
+/***/ }),
+
+/***/ 165:
+/***/ (function(module, exports) {
+
+module.exports = "<h1>Searchable Pagination</h1>\n<div *ngIf=\"bookings && !service.isLoading\">\n  <input #searchTerm (keyup)=\"search(searchTerm.value)\" placeholder=\"Search bookings...\"/>\n  <ul>\n    <li *ngFor=\"let booking of bookings.data\">{{booking.description}}</li>\n  </ul>\n  <p>Showing booking {{bookings.from}} to {{bookings.to}} of {{bookings.total}}</p>\n  <p>Page {{bookings.current_page}} of {{bookings.last_page}}</p>\n  <button (click)=\"prevPage()\" [disabled]=\"!bookings.prev_page_url\" >Prev</button>\n  <button (click)=\"nextPage()\" [disabled]=\"!bookings.next_page_url\">Next</button> \n</div>\n<p *ngIf=\"service.isLoading\">Loading...</p>"
+
+/***/ }),
+
+/***/ 206:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(95);
+
+
+/***/ }),
+
+/***/ 65:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BasicPaginationService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var BasicPaginationService = (function () {
+    function BasicPaginationService(http) {
+        this.http = http;
+        this.bookingUrl = '/api/bookings';
+        this.isLoading = false;
+    }
+    BasicPaginationService.prototype.getBookings = function () {
+        var _this = this;
+        this.isLoading = true;
+        return this.http.get(this.bookingUrl)
+            .toPromise()
+            .then(function (response) {
+            _this.isLoading = false;
+            return response.json();
+        })
+            .catch(this.handleError);
+    };
+    BasicPaginationService.prototype.getBookingsAtUrl = function (url) {
+        var _this = this;
+        this.isLoading = true;
+        return this.http.get(url)
+            .toPromise()
+            .then(function (response) {
+            _this.isLoading = false;
+            return response.json();
+        })
+            .catch(this.handleError);
+    };
+    BasicPaginationService.prototype.handleError = function (error) {
+        console.error('An error occurred', error); // for demo purposes only
+        this.isLoading = false;
+        return Promise.reject(error.message || error);
+    };
+    return BasicPaginationService;
+}());
+BasicPaginationService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], BasicPaginationService);
+
+var _a;
+//# sourceMappingURL=basic-pagination.service.js.map
+
+/***/ }),
+
+/***/ 66:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPaginationService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var SearchPaginationService = (function () {
+    function SearchPaginationService(http) {
+        this.http = http;
+        this.bookingUrl = '/api/bookings';
+        this.bookingSearchUrl = '/api/bookings/search/?term=';
+        this.isLoading = false;
+    }
+    SearchPaginationService.prototype.getBookings = function () {
+        var _this = this;
+        this.isLoading = true;
+        return this.http.get(this.bookingUrl)
+            .toPromise()
+            .then(function (response) {
+            _this.isLoading = false;
+            return response.json();
+        })
+            .catch(this.handleError);
+    };
+    SearchPaginationService.prototype.getBookingsAtUrl = function (url) {
+        var _this = this;
+        this.isLoading = true;
+        return this.http.get(url)
+            .toPromise()
+            .then(function (response) {
+            _this.isLoading = false;
+            return response.json();
+        })
+            .catch(this.handleError);
+    };
+    SearchPaginationService.prototype.search = function (term) {
+        var _this = this;
+        this.isLoading = true;
+        return this.http.get("" + this.bookingSearchUrl + term)
+            .toPromise()
+            .then(function (response) {
+            _this.isLoading = false;
+            return response.json();
+        })
+            .catch(this.handleError);
+    };
+    SearchPaginationService.prototype.handleError = function (error) {
+        console.error('An error occurred', error); // for demo purposes only
+        this.isLoading = false;
+        return Promise.reject(error.message || error);
+    };
+    return SearchPaginationService;
+}());
+SearchPaginationService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], SearchPaginationService);
+
+var _a;
+//# sourceMappingURL=search-pagination.service.js.map
+
+/***/ }),
+
+/***/ 94:
+/***/ (function(module, exports) {
+
+function webpackEmptyContext(req) {
+	throw new Error("Cannot find module '" + req + "'.");
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = 94;
+
+
+/***/ }),
+
+/***/ 95:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(106);
+
+
+
+
+if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* enableProdMode */])();
+}
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ })
+
+},[206]);
+//# sourceMappingURL=main.bundle.js.map

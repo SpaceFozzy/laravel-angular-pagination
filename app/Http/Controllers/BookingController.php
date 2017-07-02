@@ -30,11 +30,12 @@ class BookingController extends Controller
 
     public function search(Request $request)
     {
-        $text = $request->input('text');
+        $term = $request->input('term');
         $this->validate($request, array(
-            'text' => 'max:255',
+            'term' => 'max:255',
         ));
-        $bookings = Booking::where('description', 'like', '%'.$request->text.'%')->get();
+        $bookings = Booking::where('description', 'like', '%'.$request->term.'%')->paginate(10);
+        $bookings->appends(Request::only('q'))->links();
         return $bookings;
     }
 }

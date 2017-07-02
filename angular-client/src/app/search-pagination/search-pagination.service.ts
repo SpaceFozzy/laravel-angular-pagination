@@ -9,13 +9,14 @@ import { PaginatedBooking } from '../shared/paginated-booking.model'
 
 @Injectable()
 export class SearchPaginationService {
-    private bookinUrl: string = '/api/bookings'
+    private bookingUrl: string = '/api/bookings'
+    private bookingSearchUrl: string = '/api/bookings/search/?term='
     public isLoading: boolean = false;
     constructor(private http: Http) { }
     
     getBookings(): Promise<PaginatedBooking>{
         this.isLoading = true;
-        return this.http.get(this.bookinUrl)
+        return this.http.get(this.bookingUrl)
         .toPromise()
         .then((response) => {
             this.isLoading = false;
@@ -27,6 +28,17 @@ export class SearchPaginationService {
     getBookingsAtUrl(url: string): Promise<PaginatedBooking>{
         this.isLoading = true;
         return this.http.get(url)
+        .toPromise()
+        .then((response) => {
+            this.isLoading = false;
+            return response.json() as PaginatedBooking
+        })
+        .catch(this.handleError);
+    }
+
+    search(term: string) : Promise<PaginatedBooking>{
+        this.isLoading = true;
+        return this.http.get(`${this.bookingSearchUrl}${term}`)
         .toPromise()
         .then((response) => {
             this.isLoading = false;
