@@ -35,7 +35,6 @@ class BookingController extends Controller
             'term' => 'max:255',
         ));
         $bookings = Booking::where('description', 'like', '%'.$request->term.'%')->paginate(10);
-        $bookings->appends(Request::only('q'))->links();
         return $bookings;
     }
 }

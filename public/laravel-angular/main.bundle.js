@@ -160,8 +160,6 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_debounceTime__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_distinctUntilChanged__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_distinctUntilChanged___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_distinctUntilChanged__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap__ = __webpack_require__(173);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPaginationComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -177,10 +175,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var SearchPaginationComponent = (function () {
     function SearchPaginationComponent(service) {
         this.service = service;
+        this.currentSearchTerm = null;
         this.searchTermStream = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["Subject"]();
     }
     SearchPaginationComponent.prototype.ngOnInit = function () {
@@ -190,16 +188,38 @@ var SearchPaginationComponent = (function () {
             .debounceTime(300)
             .distinctUntilChanged()
             .subscribe(function (term) {
-            _this.service.search(term).then(function (bookings) { return _this.bookings = bookings; });
+            _this.service.search(term).then(function (bookings) {
+                _this.currentSearchTerm = term;
+                _this.updateBookings(bookings);
+            });
         });
+    };
+    SearchPaginationComponent.prototype.updateBookings = function (bookings) {
+        var bookingsWithUpdatedNavs = this.updateNavUrls(this.currentSearchTerm, bookings);
+        this.bookings = bookingsWithUpdatedNavs;
+    };
+    SearchPaginationComponent.prototype.updateNavUrls = function (term, bookings) {
+        if (term) {
+            if (bookings.prev_page_url) {
+                bookings.prev_page_url += "&term=" + term;
+            }
+            if (bookings.next_page_url) {
+                bookings.next_page_url += "&term=" + term;
+            }
+        }
+        return bookings;
     };
     SearchPaginationComponent.prototype.prevPage = function () {
         var _this = this;
-        this.service.getBookingsAtUrl(this.bookings.prev_page_url).then(function (bookings) { return _this.bookings = bookings; });
+        this.service.getBookingsAtUrl(this.bookings.prev_page_url).then(function (bookings) {
+            _this.updateBookings(bookings);
+        });
     };
     SearchPaginationComponent.prototype.nextPage = function () {
         var _this = this;
-        this.service.getBookingsAtUrl(this.bookings.next_page_url).then(function (bookings) { return _this.bookings = bookings; });
+        this.service.getBookingsAtUrl(this.bookings.next_page_url).then(function (bookings) {
+            _this.updateBookings(bookings);
+        });
     };
     SearchPaginationComponent.prototype.search = function (term) {
         this.searchTermStream.next(term);
@@ -308,7 +328,7 @@ module.exports = "<h1>Basic Setup</h1>\n<div *ngIf=\"bookings && !service.isLoad
 /***/ 165:
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Searchable Pagination</h1>\n<div *ngIf=\"bookings && !service.isLoading\">\n  <input #searchTerm (keyup)=\"search(searchTerm.value)\" placeholder=\"Search bookings...\"/>\n  <ul>\n    <li *ngFor=\"let booking of bookings.data\">{{booking.description}}</li>\n  </ul>\n  <p>Showing booking {{bookings.from}} to {{bookings.to}} of {{bookings.total}}</p>\n  <p>Page {{bookings.current_page}} of {{bookings.last_page}}</p>\n  <button (click)=\"prevPage()\" [disabled]=\"!bookings.prev_page_url\" >Prev</button>\n  <button (click)=\"nextPage()\" [disabled]=\"!bookings.next_page_url\">Next</button> \n</div>\n<p *ngIf=\"service.isLoading\">Loading...</p>"
+module.exports = "<h1>Searchable Pagination</h1>\n  <input #searchTerm (keyup)=\"search(searchTerm.value)\" placeholder=\"Search bookings...\"/>\n<div *ngIf=\"bookings && !service.isLoading\">\n  <ul>\n    <li *ngFor=\"let booking of bookings.data\">{{booking.description}}</li>\n  </ul>\n  <p>Showing booking {{bookings.from}} to {{bookings.to}} of {{bookings.total}}</p>\n  <p>Page {{bookings.current_page}} of {{bookings.last_page}}</p>\n  <button (click)=\"prevPage()\" [disabled]=\"!bookings.prev_page_url\" >Prev</button>\n  <button (click)=\"nextPage()\" [disabled]=\"!bookings.next_page_url\">Next</button> \n</div>\n<p *ngIf=\"service.isLoading\">Loading...</p>"
 
 /***/ }),
 

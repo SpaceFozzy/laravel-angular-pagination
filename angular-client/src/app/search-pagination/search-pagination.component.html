@@ -1,6 +1,6 @@
 <h1>Searchable Pagination</h1>
-<div *ngIf="bookings && !service.isLoading">
   <input #searchTerm (keyup)="search(searchTerm.value)" placeholder="Search bookings..."/>
+<div *ngIf="bookings && !service.isLoading">
   <ul>
     <li *ngFor="let booking of bookings.data">{{booking.description}}</li>
   </ul>

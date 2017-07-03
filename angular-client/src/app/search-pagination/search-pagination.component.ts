@@ -6,7 +6,6 @@ import { Subject } from "rxjs/Subject";
 
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
-import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'search-pagination',
@@ -15,6 +14,7 @@ import 'rxjs/add/operator/switchMap';
 })
 export class SearchPaginationComponent implements OnInit {
   bookings: PaginatedBooking;
+  currentSearchTerm: string = null;
   private searchTermStream = new Subject<string>();
   constructor(public service: SearchPaginationService) { }
 
@@ -24,16 +24,36 @@ export class SearchPaginationComponent implements OnInit {
       .debounceTime(300)
       .distinctUntilChanged()
       .subscribe((term: string) => {
-        this.service.search(term).then(bookings => this.bookings = bookings)
+        this.service.search(term).then((bookings) => {
+          this.currentSearchTerm = term;
+          this.updateBookings(bookings);
+        })
       });
   }
 
+  updateBookings(bookings: PaginatedBooking) {
+    let bookingsWithUpdatedNavs = this.updateNavUrls(this.currentSearchTerm, bookings);
+    this.bookings = bookingsWithUpdatedNavs;
+  }
+
+  updateNavUrls(term: string, bookings: PaginatedBooking) : PaginatedBooking {
+    if (term) {
+      if (bookings.prev_page_url) { bookings.prev_page_url += `&term=${term}` }
+      if (bookings.next_page_url) { bookings.next_page_url += `&term=${term}` }
+    }
+    return bookings;
+  }
+
   prevPage() {
-    this.service.getBookingsAtUrl(this.bookings.prev_page_url).then(bookings => this.bookings = bookings);
+    this.service.getBookingsAtUrl(this.bookings.prev_page_url).then((bookings) => {
+      this.updateBookings(bookings);
+    });
   }
 
   nextPage() {
-    this.service.getBookingsAtUrl(this.bookings.next_page_url).then(bookings => this.bookings = bookings);
+    this.service.getBookingsAtUrl(this.bookings.next_page_url).then((bookings) => {
+      this.updateBookings(bookings);
+    });
   }
 
   search(term: string) {
