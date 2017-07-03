@@ -2,9 +2,10 @@
 This project is meant to demonstrate how pagination can be implemented with Laravel and Angular.
 
 ## Notes
- * The project demo is currently up and running at http://demo1.robotmonster.ca/laravel-angular/basic-pagination.
+ * The project demo is currently up and running at http://demo1.robotmonster.ca/.
  * The Angular portion of the project can be found in the `angular-client/` folder.
- * The Angular component demonstrating native Laravel pagination with Angular UI is `angular-client/src/app/basic-pagination` [(link) ](https://github.com/SpaceFozzy/laravel-angular-pagination/tree/master/angular-client/src/app/basic-pagination).
+ * The Angular component demonstrating basic native Laravel pagination with Angular UI is `angular-client/src/app/basic-pagination` [(link) ](https://github.com/SpaceFozzy/laravel-angular-pagination/tree/master/angular-client/src/app/basic-pagination).
+ * The Angular component demonstrating searchable native Laravel pagination with Angular UI is `angular-client/src/app/search-pagination` [(link) ](https://github.com/SpaceFozzy/laravel-angular-pagination/tree/master/angular-client/src/app/search-pagination).
 
 ## Local Project Setup
 To get the project installed and running locally:
